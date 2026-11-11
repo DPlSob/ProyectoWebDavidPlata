@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>ProyectoWEBDavidPlata</title>
+        <link>https://github.com/DPlSob/ProyectoWebDavidPlata</link>
+        <description>Sitio web de una empresa de cines</description>
+        <language>es</language>
+        <item>
+            <title>Blog</title>
+            <link>https://github.com/DPlSob/ProyectoWebDavidPlata/blog.html</link>
+            <guid>https://github.com/DPlSob/ProyectoWebDavidPlata/blog.html</guid>
+            <pubDate>Mon, 011 Nov 2026 23:42:00 +0100</pubDate>
+            <description>Un blog informativo de por qué el cine sigue vivo a dia de hoy</description>
+        </item>
+        <item>
+            <title>Tabla</title>
+            <link>https://github.com/DPlSob/ProyectoWebDavidPlata/tabla.html</link>
+            <guid>https://github.com/DPlSob/ProyectoWebDavidPlata/tabla.html</guid>
+            <pubDate>Mon, 011 Nov 2026 23:42:00 +0100</pubDate>
+            <description>Una tabla que incluye una serie de películas clasificadas por su género y una descripción de estas</description>
+        </item>
+        <item>
+            <title>Galeria</title>
+            <link>https://github.com/DPlSob/ProyectoWebDavidPlata/galeria.html</link>
+            <guid>https://github.com/DPlSob/ProyectoWebDavidPlata/galeria.html</guid>
+            <pubDate>Mon, 011 Nov 2026 23:42:00 +0100</pubDate>
+            <description>Fotos de las salas de cine, ademas de videos de youtube, podcast, ubicaciones y fotos con enlaces</description>
+        </item>
+    </channel>
+</rss>
