@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTICINES Plata</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="images/icono.png">
+
+
+</head>
+<body>
+    <header>
+        <h1>MULTICINES PLATA</h1>
+        <a href="index.html"><img src="images/logo.svg" alt="Logotipo"> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blog.html">Formulario</a></li>
+                <li><a href="galeria.html">galeria</a></li>
+                <li><a href="tabla.html">tabla</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form name="reserva_cine" action="#" method="post" enctype="multipart/form-data">
+                
+                <fieldset>
+                    <legend>Datos Personales</legend>
+
+                    <p><label for="nombre">Nombre</label><br>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50" placeholder="Tu nombre"></p>
+
+                    <p><label for="correo">Correo</label><br>
+                    <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com"></p>
+
+                    <p><label for="password">Contraseña</label><br>
+                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mínimo 8 caracteres"></p>
+                    
+                    <p><label for="fecha">Fecha</label><br>
+                    <input type="date" id="fecha" name="fecha" required min="1920-01-01" max="2012-12-31"></p>
+
+                    <p><label for="archivo">Foto</label><br>
+                    <input type="file" id="archivo" name="archivo" accept="image/png, image/jpeg"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Reserva</legend>
+
+                    <p><label for="pelicula">Película</label><br>
+                    <select id="pelicula" name="pelicula" required>
+                        <option value="" disabled selected>-- Elige una opción --</option>
+                        <option value="avatar">Avatar</option>
+                        <option value="dune">Dune</option>
+                        <option value="spiderman">Spider-Man</option>
+                        <option value="oppenheimer">Oppenheimer</option>
+                    </select></p>
+
+                    <p><label for="asientos">Asientos</label><br>
+                    <input type="number" id="asientos" name="asientos" min="1" max="10" value="1" required></p>
+
+                    <p><strong>Zona</strong><br>
+                    <input type="radio" id="adelante" name="zona" value="adelante">
+                    <label for="adelante">Adelante</label><br>
+
+                    <input type="radio" id="centro" name="zona" value="centro" checked>
+                    <label for="centro">Cento</label><br>
+
+                    <input type="radio" id="atras" name="zona" value="atras">
+                    <label for="atras">Atras</label></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Extras</legend>
+
+                    <p><strong>Extras:</strong><br>
+                    <input type="checkbox" id="palomitas" name="extras[]" value="palomitas" checked>
+                    <label for="palomitas">Palomitas</label><br>
+
+                    <input type="checkbox" id="nachos" name="extras[]" value="nachos">
+                    <label for="nachos">Nachos</label><br>
+
+                    <input type="checkbox" id="dulces" name="extras[]" value="dulces">
+                    <label for="dulces">Dulces</label></p>
+
+                    <p><label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="250" placeholder="Escribe aquí..."></textarea></p>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                    <button type="button" onclick="alert('Ayuda')">Ayuda</button>
+                </p>
+
+            </form>
+
+            <hr>
+
+            <h1>Reseña de la Película</h1>
+
+            <form name="resena_pelicula" action="#" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>Datos del Espectador</legend>
+
+                    <p><label for="autor">Nombre</label><br>
+                    <input type="text" id="autor" name="autor" required minlength="3" maxlength="50" placeholder="Tu nombre"></p>
+
+                    <p><label for="correo_resena">Correo</label><br>
+                    <input type="email" id="correo_resena" name="correo_resena" required placeholder="correo@ejemplo.com"></p>
+
+                    <p><label for="clave_resena">Contraseña</label><br>
+                    <input type="password" id="clave_resena" name="clave_resena" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mínimo 8 caracteres"></p>
+
+                    <p><label for="fecha_vistas">Fecha de visita</label><br>
+                    <input type="date" id="fecha_vistas" name="fecha_vistas" required min="2020-01-01" max="2026-12-31"></p>
+
+                    <p><label for="ticket_img">Foto del ticket:</label><br>
+                    <input type="file" id="ticket_img" name="ticket_img" accept="image/png, image/jpeg"></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Evaluación</legend>
+
+                    <p><label for="pelicula_vistas">Película</label><br>
+                    <select id="pelicula_vistas" name="pelicula_vistas" required>
+                        <option value="" disabled selected>-- Elige una opción --</option>
+                        <option value="avatar">Avatar</option>
+                        <option value="dune">Dune</option>
+                        <option value="spiderman">Spider-Man</option>
+                        <option value="oppenheimer">Oppenheimer</option>
+                    </select></p>
+
+                    <p><label for="veces_vista">Veces vista</label><br>
+                    <input type="number" id="veces_vista" name="veces_vista" min="1" max="10" value="1" required></p>
+
+                    <p><strong>¿La recomendarías?</strong><br>
+                    <input type="radio" id="recomienda_si" name="recomienda" value="si" checked>
+                    <label for="recomienda_si">Sí</label><br>
+
+                    <input type="radio" id="recomienda_no" name="recomienda" value="no">
+                    <label for="recomienda_no">No</label></p>
+
+                    <p><label for="satisfaccion">Nivel de satisfacción</label><br>
+                    <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" step="1" value="5"></p>
+                </fieldset>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                    <button type="button" onclick="alert('Ayuda')">Ayuda</button>
+                </p>
+            </form>
+        </section>
+        <section>
+    </main>
+    <footer>
+        <h3>Nuestras redes:</h3>
+        <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://x.com">X</a></li>
+        </ul> 
+    <address>
+        <h3>Dónde nos encontramos</h3>
+        <p>Calle Pedro Antonio de Alarcón, 57, Granada</p>
+        <h3>Autor</h3>
+        <p>David Plata Sobrino</p>
+    </address>
+
+    <h3>Curso</h3>
+    <p>Primero DAM mañanas</p>
+    <h3>Año</h3>
+    <p><time datetime="2026">2026</time></p>
+</footer>
+</body>
+</html>
